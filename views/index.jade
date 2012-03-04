@@ -1,0 +1,14 @@
+h1= 'Crop image'
+
+button(name='Save', value='Save', id='saveCrop') Save
+br
+img(src='/images/#{images[0].image}', width='640', height='480', class='placeholderImage', id='#{images[0].id}')
+
+crops = ['130x130', '400x300', '580x326']
+
+ul
+	each crop in crops
+		li
+			cropData = images[0].variants[crop]
+			xy = cropData !== undefined ? cropData.x + 'x' + cropData.y : ''
+			a(class='select', data-dimensions='#{crop}', data-xy='#{xy}', href='#') #{crop}
