@@ -9,7 +9,7 @@ For it to work, you need
 
  * mongo installed and mongod running
  * A pre-filled entry in your mongo-db, in the database 'imageHandler' and the collection 'images', i.e.:
-        db.images.save({'id':'1.23456', 'image':'SNC11127.JPG', 'dimensions':{})
+                db.images.save({'id':'1.23456', 'image':'SNC11127.JPG', 'dimensions':{})
  * imagemagick installed
 
 And that should be it.
